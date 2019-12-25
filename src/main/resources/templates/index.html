@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 th:text="${value}"></h1>
+<hr/>
+<!-- shiro标签需要用div包起来 -->
+<div shiro:hasPermission="user:add">
+用户添加：<a href="add">用户添加</a><br/>
+</div>
+<div shiro:hasPermission="user:update">
+用户修改：<a href="update">用户修改</a><br/>
+</div>
+<shiro:user>
+<a href="loginOut">退出</a><br/>
+</shiro:user>
+<shiro:notAuthenticated>
+<a href="toLogin">登录页面</a><br/>
+</shiro:notAuthenticated>
+</body>
+</html>
